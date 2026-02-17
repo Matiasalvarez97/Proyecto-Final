@@ -29,17 +29,19 @@ const Aside = () => {
   return (
         <aside>
             <h1>Chat UTN</h1>
-            <input type="search" placeholder="Buscar Contactos" onChange={handleChange}/>
+            <input className="search" type="search" placeholder="Buscar Contactos" onChange={handleChange}/>
             {
-                filteredUsers.length === 0 && <p>No se encontraron contactos</p> 
+                filteredUsers.length === 0 && <p className="not-found-text">No se encontraron contactos</p> 
             }
             <ul>
                 {
                    filteredUsers.map ((user) => (
                     <li key={user.id}>
                         <img src={user.image} alt="foto de perfil" />
-                        <div>{user.firstName} {user.lastName}</div>
-                    <small>{user.address.country}</small>
+                        <div>{user.firstName} {user.lastName}
+                        <small>{user.address.country}</small>
+                        </div>
+                    
                     </li>
                   
                    )

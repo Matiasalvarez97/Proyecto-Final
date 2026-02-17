@@ -28,7 +28,7 @@ const Chat = () => {
         setText("")
     }
     return (
-    <section>
+    <section className="chat">
         <header>
             <h2>Emily Johnson</h2>
             <p>ultima conexion: hace 1 minuto</p>         
