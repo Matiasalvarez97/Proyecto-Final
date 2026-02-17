@@ -14,7 +14,8 @@ aside{
     background-color: lightblue;
     width: 260px;
     padding: 20px;
-}
+    overflow-y: scroll;
+        }
 section{
     flex: 1;
 }
