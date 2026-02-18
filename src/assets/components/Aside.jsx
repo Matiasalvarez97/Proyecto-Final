@@ -25,8 +25,12 @@ const Aside = () => {
         fectchingData()
     },[])
 
-    const filteredUsers = users.filter((user) => user.firstName.toLowerCase(). includes (search.toLocaleLowerCase()))
-  return (
+    const filteredUsers = users.filter((user) => {
+       const fullName = `${user.firstName} ${user.lastName}`
+       return fullName.toLocaleLowerCase().includes(search.toLocaleLowerCase()) 
+    })
+  
+    return (
         <aside>
             <h1>Chat UTN</h1>
             <input className="search" type="search" placeholder="Buscar Contactos" onChange={handleChange}/>
