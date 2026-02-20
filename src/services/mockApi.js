@@ -1,18 +1,115 @@
-  const users = [
-    { id: 1,name: "Lionel Messi " , status: "online" } ,
-    { id: 2,name: "Taylor S" , status: "online" } ,
-    { id: 3,name: "Drew B" , status: "online" } ,
-    { id: 4,name: "Liam G" , status: "offline" } ,
-    { id: 5,name: "Noel G" , status: "online" } ,
-   ];
+const users = [
+  {
+    id: 1,
+    firstName: "Emily",
+    lastName: "Johnson",
+    address: { country: "United States" },
+    image: "https://i.pravatar.cc/150?img=1",
+    messages: [
+      { author: "Emily", text: "Hello there", time: "09:12" },
+      { author: "me", text: "Hi Emily", time: "09:13" }
+    ]
+  },
+  {
+    id: 2,
+    firstName: "Michael",
+    lastName: "Williams",
+    address: { country: "Germany" },
+    image: "https://i.pravatar.cc/150?img=2",
+    messages: [
+      { author: "Michael", text: "Server deployed", time: "10:01" },
+      { author: "me", text: "Ok, checking", time: "10:05" }
+    ]
+  },
+  {
+    id: 3,
+    firstName: "Sophia",
+    lastName: "Brown",
+    address: { country: "Japan" },
+    image: "https://i.pravatar.cc/150?img=3",
+    messages: [
+      { author: "Sophia", text: "Draft ready", time: "11:22" },
+      { author: "me", text: "Send it", time: "11:30" }
+    ]
+  },
+  {
+    id: 4,
+    firstName: "Liam",
+    lastName: "Miller",
+    address: { country: "Canada" },
+    image: "https://i.pravatar.cc/150?img=4",
+    messages: [
+      { author: "Liam", text: "Build completed", time: "12:10" },
+      { author: "me", text: "Great", time: "12:11" }
+    ]
+  },
+  {
+    id: 5,
+    firstName: "Olivia",
+    lastName: "Davis",
+    address: { country: "United Kingdom" },
+    image: "https://i.pravatar.cc/150?img=5",
+    messages: [
+      { author: "Olivia", text: "Design uploaded", time: "13:45" },
+      { author: "me", text: "Reviewing", time: "13:50" }
+    ]
+  },
+  {
+    id: 6,
+    firstName: "Noah",
+    lastName: "Garcia",
+    address: { country: "Mexico" },
+    image: "https://i.pravatar.cc/150?img=6",
+    messages: [
+      { author: "Noah", text: "Database seeded", time: "14:03" },
+      { author: "me", text: "Thanks", time: "14:04" }
+    ]
+  },
+  {
+    id: 7,
+    firstName: "Ava",
+    lastName: "Martinez",
+    address: { country: "Spain" },
+    image: "https://i.pravatar.cc/150?img=7",
+    messages: [
+      { author: "Ava", text: "Testing UI", time: "15:20" },
+      { author: "me", text: "Any issues?", time: "15:22" }
+    ]
+  },
+  {
+    id: 8,
+    firstName: "Elijah",
+    lastName: "Rodriguez",
+    address: { country: "Argentina" },
+    image: "https://i.pravatar.cc/150?img=8",
+    messages: [
+      { author: "Elijah", text: "Client contacted", time: "16:18" },
+      { author: "me", text: "Waiting response", time: "16:25" }
+    ]
+  },
+  {
+    id: 9,
+    firstName: "Isabella",
+    lastName: "Hernandez",
+    address: { country: "Chile" },
+    image: "https://i.pravatar.cc/150?img=9",
+    messages: [
+      { author: "Isabella", text: "Report sent", time: "17:02" },
+      { author: "me", text: "Received", time: "17:05" }
+    ]
+  },
+  {
+    id: 10,
+    firstName: "James",
+    lastName: "Lopez",
+    address: { country: "Brazil" },
+    image: "https://i.pravatar.cc/150?img=10",
+    messages: [
+      { author: "James", text: "Meeting confirmed", time: "18:40" },
+      { author: "me", text: "See you then", time: "18:41" }
+    ]
+  }
+];
 
-   const messages =[
-    { id: 1, author: "Emily", text: "estas?", time: "22:57" },
-  { id: 2, author: "juan", text: "Todo bien, ¿y vos?", time: "22:58" },
-  { id: 3, author: "Emily", text: "Bien, terminando un proyecto.", time: "23:00" },
-  { id: 4, author: "juan", text: "¿El de programación?", time: "23:01" },
-  { id: 5, author: "Emily", text: "Sí, ¡por fin!", time: "23:02" },
-  { id: 6, author: "juan", text: "Buenísimo, festejamos mañana.", time: "23:05" }
-   ]
 
-   export {users, messages}
+export { users }

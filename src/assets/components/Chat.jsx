@@ -1,12 +1,11 @@
-import { useState, useRef, useEffect } from "react"
-import { messages as mockMessages } from "../../services/mockApi"
-const Chat = ({activeUser}) => {
+import { useState, useRef, useEffect, useContext } from "react"
+import { ChatContext } from "../../context/ChatContext"
+const Chat = () => {
     const [text , setText] = useState("")
-    const[messages, setMessages] = useState(mockMessages)
-    
-
+  
     const chatBodyRef= useRef(null)
-    
+    const {selectedUser} = useContext(ChatContext)
+
     const handleChangeText = (event) => {
         setText(event.target.value)
     }
@@ -27,16 +26,15 @@ const Chat = ({activeUser}) => {
             text: text
         }
 
-        setMessages([...messages, newMessage])
         setText("")
     }
     useEffect(() => {
         if(chatBodyRef.current){
             chatBodyRef.current.scrollTop = chatBodyRef.current.scrollHeight
         }
-    },[messages])
+    },[])
 
-    if (!activeUser){
+    if (!selectedUser){
         return(
         <section className="chat-cont-empty"><p className="chat-empty">Selecciona un contacto para empezar a conversar</p></section>
         )
@@ -45,12 +43,13 @@ const Chat = ({activeUser}) => {
     return (
     <section className="chat">
         <header>
-            <h2>{activeUser.firstName} {activeUser.lastName}</h2>
-            <p>{activeUser.address.country}</p>         
+            <h2>{selectedUser.firstName} {selectedUser.lastName}</h2>
+            <p>{selectedUser.address.country}</p>
+
         </header>
         <div className="chat-body" ref={chatBodyRef}>
             {
-                messages.map((message) => <div key={message.id} className={`message ${message.author === "juan" ? "me" : "received"}`}> 
+                selectedUser.messages.map((message) => <div key={message.id} className={`message ${message.author === "juan" ? "me" : "received"}`}> 
                    <p><b>{message.author}</b>: {message.text}</p>
                    <p className="timestamp">{message.time}</p>
                 </div>)

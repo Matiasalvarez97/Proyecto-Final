@@ -1,29 +1,15 @@
-import { useEffect, useState } from "react"
-import { users } from "../../services/mockApi.js"
-const Aside = ({onActiveUser}) => {
+import { useContext, useEffect, useState } from "react"
+/* import { users } from "../../services/mockApi.js" */
+import { ChatContext } from "../../context/ChatContext.jsx"
+const Aside = () => {
     const [search , setSearch] = useState ("")
-    const [users, setUsers] = useState([])
+   
+
+    const {users, handleSelectedUser } = useContext (ChatContext)
+
     const handleChange = (event) => {
         setSearch(event.target.value)
     }
-
-    const fectchingData = async () => {
-        try{
-            const response = await fetch("https://dummyjson.com/users")
-            if (!response.ok){
-                alert("fallo el pedido")
-                return
-            }
-            const data = await response.json()
-             setUsers(data.users)
-        } catch(error){
-            console.log(error.message)
-        }
-    }
-
-    useEffect(() => {
-        fectchingData()
-    },[])
 
     const filteredUsers = users.filter((user) => {
        const fullName = `${user.firstName} ${user.lastName}`
@@ -31,7 +17,7 @@ const Aside = ({onActiveUser}) => {
     })
 
     const handleClick = (id) =>{
-        onActiveUser(id)
+        handleSelectedUser(id)
     }
 
     return (
