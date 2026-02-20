@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { users } from "../../services/mockApi.js"
-const Aside = () => {
+const Aside = ({onActiveUser}) => {
     const [search , setSearch] = useState ("")
     const [users, setUsers] = useState([])
     const handleChange = (event) => {
@@ -29,7 +29,11 @@ const Aside = () => {
        const fullName = `${user.firstName} ${user.lastName}`
        return fullName.toLocaleLowerCase().includes(search.toLocaleLowerCase()) 
     })
-  
+
+    const handleClick = (id) =>{
+        onActiveUser(id)
+    }
+
     return (
         <aside>
             <h1>Chat UTN</h1>
@@ -40,7 +44,7 @@ const Aside = () => {
             <ul>
                 {
                    filteredUsers.map ((user) => (
-                    <li key={user.id}>
+                    <li key={user.id} onClick={()=> handleClick(user.id)}>
                         <img src={user.image} alt="foto de perfil" />
                         <div>{user.firstName} {user.lastName}
                         <small>{user.address.country}</small>

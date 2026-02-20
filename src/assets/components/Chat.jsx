@@ -1,8 +1,9 @@
 import { useState, useRef, useEffect } from "react"
 import { messages as mockMessages } from "../../services/mockApi"
-const Chat = () => {
+const Chat = ({activeUser}) => {
     const [text , setText] = useState("")
     const[messages, setMessages] = useState(mockMessages)
+    
 
     const chatBodyRef= useRef(null)
     
@@ -34,11 +35,18 @@ const Chat = () => {
             chatBodyRef.current.scrollTop = chatBodyRef.current.scrollHeight
         }
     },[messages])
+
+    if (!activeUser){
+        return(
+        <p>Selecciona un contacto para empezar a conversar</p>
+        )
+    }
+  
     return (
     <section className="chat">
         <header>
-            <h2>Emily Johnson</h2>
-            <p>ultima conexion: hace 1 minuto</p>         
+            <h2>{activeUser.firstName} {activeUser.lastName}</h2>
+            <p>{activeUser.address.country}</p>         
         </header>
         <div className="chat-body" ref={chatBodyRef}>
             {
