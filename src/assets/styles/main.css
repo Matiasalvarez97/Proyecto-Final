@@ -138,6 +138,28 @@ align-items: center;
 color: #888888;
 background-color: white;
 }
+
+.cont-not-found{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cont-not-found a {
+    display: block;
+    background-color: rgb(79, 79, 79);
+    padding: 8px 16px;
+    text-decoration: none;
+    color: white;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+.cont-not-found a:hover{
+    background-color:rgb(123, 123, 123) ;
+}
+
 @media (max-width: 880px) {
     aside{
         display: none;

@@ -1,8 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { App } from './assets/components/app'
+
 import "./assets/styles/main.css"
 import { ChatProvider } from './context/ChatContext'
+
+import { RouterApp } from './router/RouterApp'
 
 
 
@@ -10,7 +12,7 @@ import { ChatProvider } from './context/ChatContext'
 
   <StrictMode>
       <ChatProvider>
-        <App/>
+        <RouterApp/>
       </ChatProvider>
   </StrictMode>,
 )
