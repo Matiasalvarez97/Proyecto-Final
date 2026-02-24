@@ -3,6 +3,8 @@ const users = [
     id: 1,
     firstName: "Emily",
     lastName: "Johnson",
+    email: "emily.johnson@gmail.com",
+    password: "pepe123",
     address: { country: "United States" },
     image: "https://i.pravatar.cc/150?img=1",
     messages: [
@@ -14,6 +16,8 @@ const users = [
     id: 2,
     firstName: "Michael",
     lastName: "Williams",
+    email: "michael.williams@gmail.com",
+    password: "pepe123",
     address: { country: "Germany" },
     image: "https://i.pravatar.cc/150?img=2",
     messages: [
@@ -25,6 +29,8 @@ const users = [
     id: 3,
     firstName: "Sophia",
     lastName: "Brown",
+    email: "sophia.brown@gmail.com",
+    password: "pepe123",
     address: { country: "Japan" },
     image: "https://i.pravatar.cc/150?img=3",
     messages: [
@@ -36,6 +42,8 @@ const users = [
     id: 4,
     firstName: "Liam",
     lastName: "Miller",
+    email: "liam.miller@gmail.com",
+    password: "pepe123",
     address: { country: "Canada" },
     image: "https://i.pravatar.cc/150?img=4",
     messages: [
@@ -47,6 +55,8 @@ const users = [
     id: 5,
     firstName: "Olivia",
     lastName: "Davis",
+    email: "olivia.davis@gmail.com",
+    password: "pepe123",
     address: { country: "United Kingdom" },
     image: "https://i.pravatar.cc/150?img=5",
     messages: [
@@ -58,6 +68,8 @@ const users = [
     id: 6,
     firstName: "Noah",
     lastName: "Garcia",
+    email: "noah.garcia@gmail.com",
+    password: "pepe123",
     address: { country: "Mexico" },
     image: "https://i.pravatar.cc/150?img=6",
     messages: [
@@ -69,6 +81,8 @@ const users = [
     id: 7,
     firstName: "Ava",
     lastName: "Martinez",
+    email: "ava.martinez@gmail.com",
+    password: "pepe123",
     address: { country: "Spain" },
     image: "https://i.pravatar.cc/150?img=7",
     messages: [
@@ -80,6 +94,8 @@ const users = [
     id: 8,
     firstName: "Elijah",
     lastName: "Rodriguez",
+    email: "elijah.rodriguez@gmail.com",
+    password: "pepe123",
     address: { country: "Argentina" },
     image: "https://i.pravatar.cc/150?img=8",
     messages: [
@@ -91,6 +107,8 @@ const users = [
     id: 9,
     firstName: "Isabella",
     lastName: "Hernandez",
+    email: "isabella.hernandez@gmail.com",
+    password: "pepe123",
     address: { country: "Chile" },
     image: "https://i.pravatar.cc/150?img=9",
     messages: [
@@ -102,6 +120,8 @@ const users = [
     id: 10,
     firstName: "James",
     lastName: "Lopez",
+    email: "james.lopez@gmail.com",
+    password: "pepe123",
     address: { country: "Brazil" },
     image: "https://i.pravatar.cc/150?img=10",
     messages: [
@@ -111,5 +131,4 @@ const users = [
   }
 ];
 
-
-export { users }
+export { users };

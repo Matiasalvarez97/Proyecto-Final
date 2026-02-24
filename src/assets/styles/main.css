@@ -216,6 +216,12 @@ section form a {
 section form a:hover {
     text-decoration: underline;
 }
+
+.error-form{
+    text-align: center;
+    color: rgb(216, 26, 26);
+    font-size: 15px;
+}
 @media (max-width: 880px) {
     aside{
         display: none;
