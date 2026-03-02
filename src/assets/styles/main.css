@@ -148,7 +148,8 @@ align-items: center;
     transition: all .2s;
 }
 .chat-input button:hover{
-
+    color: #888888;
+    background-color: white;
 }
 
 .cont-not-found{

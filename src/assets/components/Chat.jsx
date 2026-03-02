@@ -4,10 +4,10 @@ const Chat = () => {
     const [text , setText] = useState("")
   
     const chatBodyRef= useRef(null)
-    const {selectedUser} = useContext(ChatContext)
+    const {selectedUser, handleMessages} = useContext(ChatContext)
 
     const handleChangeText = (event) => {
-        setText(event.target.value)
+        setText(event.target. value)
     }
     const handleKeyDown = (event) =>{
         if(event.key === "Enter"){
@@ -20,11 +20,12 @@ const Chat = () => {
         }
         const currentTime = new Date()
         const newMessage = {
-            id: messages.length + 1,
             author:"juan",
             time: currentTime.getHours() + ":" + currentTime.getMinutes(),
             text: text
         }
+
+        handleMessages(newMessage)
 
         setText("")
     }

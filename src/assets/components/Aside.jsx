@@ -6,7 +6,7 @@ const Aside = () => {
     const [search , setSearch] = useState ("")
    
 
-    const {users, handleSelectedUser } = useContext (ChatContext)
+    const {users, handleSelectedUserId, logout } = useContext (ChatContext)
 
     const handleChange = (event) => {
         setSearch(event.target.value)
@@ -18,12 +18,12 @@ const Aside = () => {
     })
 
     const handleClick = (id) =>{
-        handleSelectedUser(id)
+        handleSelectedUserId(id)
     }
 
     const navigate= useNavigate()
     const handleLogout =() => {
-        localStorage.removeItem("user")
+        logout()
         navigate("/login")
     }
 
