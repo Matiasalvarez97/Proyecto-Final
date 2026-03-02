@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react"
 /* import { users } from "../../services/mockApi.js" */
 import { ChatContext } from "../../context/ChatContext.jsx"
+import { useNavigate } from "react-router-dom"
 const Aside = () => {
     const [search , setSearch] = useState ("")
    
@@ -20,9 +21,16 @@ const Aside = () => {
         handleSelectedUser(id)
     }
 
+    const navigate= useNavigate()
+    const handleLogout =() => {
+        localStorage.removeItem("user")
+        navigate("/login")
+    }
+
     return (
         <aside>
             <h1>Chat UTN</h1>
+            <button onClick={handleLogout}>Cerrar sesión</button>
             <input className="search" type="search" placeholder="Buscar Contactos" onChange={handleChange}/>
             {
                 filteredUsers.length === 0 && <p className="not-found-text">No se encontraron contactos</p> 

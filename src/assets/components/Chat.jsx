@@ -43,9 +43,10 @@ const Chat = () => {
     return (
     <section className="chat">
         <header>
+            <div>
             <h2>{selectedUser.firstName} {selectedUser.lastName}</h2>
             <p>{selectedUser.address.country}</p>
-
+            </div>
         </header>
         <div className="chat-body" ref={chatBodyRef}>
             {
