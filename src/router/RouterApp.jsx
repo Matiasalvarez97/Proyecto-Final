@@ -2,12 +2,13 @@ import {BrowserRouter,Routes,Route } from "react-router-dom"
 import { Home } from "../pages/Home"
 import { NotFound } from "../pages/NotFound"
 import { Login } from "../pages/Login"
+import { RouteProtected } from "../assets/components/RouteProtected"
 
 const RouterApp = () => {
     return (
         <BrowserRouter>
         <Routes>
-            <Route path="/" element={<Home/>} />
+            <Route path="/" element={<RouteProtected><Home/></RouteProtected>} />
             <Route path="/Login" element={<Login />}/>
             <Route path="*" element={<NotFound/>}/>
         </Routes>

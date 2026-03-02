@@ -7,7 +7,7 @@ const Login = () => {
     const [password,setPassword] = useState("")
     const[error,setError] = useState(null)
 
-    const {login} = useContext (ChatContext)
+    const {login,handleUser} = useContext (ChatContext)
 
     const navigate= useNavigate()
     const handleChangeEmail= (e) => {
@@ -26,12 +26,13 @@ const Login = () => {
             setError(true)
             return
         }
+        handleUser({email, password})
         navigate ("/")
     }
     return(
        <section>
         <form onSubmit={handleSubmit}>
-            <h2>Bienvenido, inicia sesion</h2>
+            <h2 className="title-login">Bienvenido, inicia sesion</h2>
             <input type="email" placeholder="ingrese email" onChange={handleChangeEmail}/>
             <input type="password" placeholder="ingrese contraseña" onChange={handleChangePassword}/>
             <button>ingresar</button>
