@@ -35,7 +35,8 @@ const Login = () => {
             <h2 className="title-login">Bienvenido, inicia sesion</h2>
             <input type="email" placeholder="ingrese email" onChange={handleChangeEmail}/>
             <input type="password" placeholder="ingrese contraseña" onChange={handleChangePassword}/>
-            <button>ingresar</button>
+            <button>Ingresar</button>
+            <button type="button" onClick={()=> navigate("/register")}>Registrar Usuario</button>
             {
                 error && <p className="error-form">Error al ingresar</p>
             }

@@ -13,9 +13,12 @@ const Aside = () => {
     }
 
     const filteredUsers = users.filter((user) => {
-       const fullName = `${user.firstName} ${user.lastName}`
+       const name = user.Firstname || user.firstName || ""
+        const lastName = user.lastName || ""
+        const fullName = `${name} ${lastName}`.trim()
        return fullName.toLocaleLowerCase().includes(search.toLocaleLowerCase()) 
     })
+
 
     const handleClick = (id) =>{
         handleSelectedUserId(id)
@@ -39,9 +42,9 @@ const Aside = () => {
                 {
                    filteredUsers.map ((user) => (
                     <li key={user.id} onClick={()=> handleClick(user.id)}>
-                        <img src={user.image} alt="foto de perfil" />
-                        <div>{user.firstName} {user.lastName}
-                        <small>{user.address.country}</small>
+                        <img src={user.image || "https://via.placeholder.com/150"} alt="foto de perfil" />
+                        <div>{user.Firstname || user.firstName} {user.lastName || ""}
+                        <small>{user.address?.country|| "Sin ubicación"}</small>
                         </div>
                     
                     </li>

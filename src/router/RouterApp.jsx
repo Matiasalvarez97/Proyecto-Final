@@ -3,7 +3,7 @@ import { Home } from "../pages/Home"
 import { NotFound } from "../pages/NotFound"
 import { Login } from "../pages/Login"
 import { RouteProtected } from "../assets/components/RouteProtected"
-
+import { Register } from "../pages/register"
 const RouterApp = () => {
     return (
         <BrowserRouter>
@@ -11,6 +11,7 @@ const RouterApp = () => {
             <Route path="/" element={<RouteProtected><Home/></RouteProtected>} />
             <Route path="/Login" element={<Login />}/>
             <Route path="*" element={<NotFound/>}/>
+            <Route path="/register" element={<Register />}/>
         </Routes>
         </BrowserRouter>
     )
