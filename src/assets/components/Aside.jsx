@@ -6,7 +6,7 @@ const Aside = () => {
     const [search , setSearch] = useState ("")
    
 
-    const {users, handleSelectedUserId,  loggedUser } = useContext (ChatContext)
+    const {users, handleSelectedUserId,  loggedUser,logout } = useContext (ChatContext)
 
     const handleChange = (event) => {
         setSearch(event.target.value)
