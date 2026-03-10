@@ -4,7 +4,7 @@ import { NotFound } from "../pages/NotFound"
 import { Login } from "../pages/Login"
 import { RouteProtected } from "../assets/components/RouteProtected"
 import { Register } from "../pages/register"
-import { Acerca } from "../pages/contacto nuevo"
+import { Acerca } from "../pages/acerca"
 const RouterApp = () => {
     return (
         <BrowserRouter>
