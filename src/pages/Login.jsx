@@ -37,6 +37,11 @@ const Login = () => {
             <input type="password" placeholder="ingrese contraseña" onChange={handleChangePassword}/>
             <button>Ingresar</button>
             <button type="button" onClick={()=> navigate("/register")}>Registrar Usuario</button>
+            <div>
+            <button type="button" onClick={() => navigate("/acerca")}>
+             Sobre este proyecto
+            </button>
+           </div>
             {
                 error && <p className="error-form">Error al ingresar</p>
             }
