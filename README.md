@@ -33,7 +33,10 @@ npm run dev
 # 5. Abrir en el navegador
 Abrir la ruta que devolvio la terminal
 
+```
+
 ## Estructura del proyecto
+```bash
 
 El proyecto está organizado de forma simple:
  
@@ -45,9 +48,9 @@ El proyecto está organizado de forma simple:
  
 
 Cada página y componente tiene una función : Home muestra la pagina principal, Login/Register manejan la autenticación de los usuarios, "Acerca" muestra la documentación, y NotFound maneja rutas que no existen dando error 404.
-
+```
 ## Instrucciones para el deploy
-
+```bash
 Para el deploy en Vercel:
 
 1. Crear una cuenta en [Vercel](https://vercel.com/).  
@@ -57,3 +60,4 @@ Para el deploy en Vercel:
 5. Hacer click en **Deploy**.  
 
 > Una vez completado, Vercel generará una URL.
+```
