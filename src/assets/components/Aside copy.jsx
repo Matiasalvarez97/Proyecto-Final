@@ -6,21 +6,17 @@ const Aside = () => {
     const [search , setSearch] = useState ("")
    
 
-    const {users, handleSelectedUserId,  loggedUser } = useContext (ChatContext)
+    const {users, handleSelectedUserId, logout } = useContext (ChatContext)
 
     const handleChange = (event) => {
         setSearch(event.target.value)
     }
 
     const filteredUsers = users.filter((user) => {
-       if (!loggedUser) return true;
-       if (user.email.toLowerCase() === loggedUser.email.toLowerCase()) {
-        return false;}
-       const name = user.Firstname || user.firstName || "";
-    const lastName = user.lastName || "";
-    const fullName = `${name} ${lastName}`.toLowerCase();
-    
-    return fullName.includes(search.toLowerCase());
+       const name = user.Firstname || user.firstName || ""
+        const lastName = user.lastName || ""
+        const fullName = `${name} ${lastName}`.trim()
+       return fullName.toLocaleLowerCase().includes(search.toLocaleLowerCase()) 
     })
 
 

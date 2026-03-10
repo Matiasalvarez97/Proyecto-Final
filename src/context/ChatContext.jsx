@@ -25,7 +25,8 @@ const ChatProvider = ({children}) => {
         const foundUser = users.find(user => user.email === userData.email);
         if (!foundUser) return false;
 
-        if (foundUser.password === userData.password) {
+        if (foundUser.password === userData.password) { 
+           handleUser(foundUser);
             return true;
         }
         return false;
